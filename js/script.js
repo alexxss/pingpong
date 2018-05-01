@@ -10,7 +10,7 @@ var dct=-1;    //主角的方向(0:左    1:右)
 
 var brickImg = function(){
   this.image = new Image();
-  this.image.src = "https://cdn.glitch.com/7469c21b-4cd3-4c40-8cb3-0bf725adf90b%2Fif_honey-bee-insect-fly-beekeeping-apiary-apiculture_2189584.png";
+  this.image.src = "./assets/bee.png";
 }
 
 var myBrick = function(x,y){
@@ -25,7 +25,7 @@ var myBrick = function(x,y){
 
 var ballImg = function(){
   this.image = new Image();
-  this.image.src="https://cdn.glitch.com/7469c21b-4cd3-4c40-8cb3-0bf725adf90b%2Fball.png";
+  this.image.src="./assets/ball.png";
 }
 
 var ball = function(x){
@@ -45,8 +45,8 @@ function init(){
   
   bg.addEventListener("load",setup,false);
 
-  canon.src="https://cdn.glitch.com/7469c21b-4cd3-4c40-8cb3-0bf725adf90b%2F0214.png";
-  bg.src="https://cdn.glitch.com/7469c21b-4cd3-4c40-8cb3-0bf725adf90b%2Fmap_2.png";
+  canon.src="./assets/cannon.png";
+  bg.src="./assets/map.png";
   myBrick.prototype = new brickImg();
   ball.prototype = new ballImg();
     
