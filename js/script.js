@@ -2,10 +2,10 @@ var canvas, context;
 var canon = new Image();
 var bg = new Image();
 var bricks = new Array(40);
-var balls = new Array(5);
+var balls = new Array(10);
 
 var cx=360;
-var cy=700;
+var cy=660;
 var dct=-1;    //主角的方向(0:左    1:右)
 
 var brickImg = function(){
@@ -55,7 +55,7 @@ function init(){
 function setup(){
     
 
-  for(var i=0; i<5;i++){
+  for(var i=0; i<10;i++){
     balls[i] = new ball(cx+32);
   } 
   for(var i = 0; i < 40; i++) {
@@ -83,7 +83,7 @@ function setup(){
 }
 
 function addBall(){
-  for(var i=0;i<5;i++){
+  for(var i=0;i<10;i++){
     if(balls[i].spawn==false){
       balls[i].x=cx+32;
       balls[i].y=cy;
@@ -110,7 +110,7 @@ function showImg() {
   for(var i=0; i<40;i++){
     bricks[i].draw();
   }
-  for(var i=0; i<5;i++){
+  for(var i=0; i<10;i++){
     if(balls[i].spawn){
       if(balls[i].y+30>0){balls[i].y-=10;}
       else {
